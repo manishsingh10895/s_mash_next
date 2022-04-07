@@ -7,8 +7,6 @@ export default function ThemeToggleButton() {
     const { toggleColorMode } = useColorMode();
     const colorvalue = useColorModeValue('light', 'dark');
 
-    console.log('[COLOR VALUE]');
-    console.log(colorvalue);
     return (
         <AnimatePresence exitBeforeEnter initial={false}>
             <motion.div

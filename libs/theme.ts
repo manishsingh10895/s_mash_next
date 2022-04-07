@@ -42,7 +42,7 @@ const colors = {
 
 const config = {
     initialColorMode: 'dark',
-    useSystemColorMode: false,
+    useSystemColorMode: true,
 }
 
 const theme = extendTheme({
