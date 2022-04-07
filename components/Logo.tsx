@@ -22,7 +22,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-    const footPrintImg = `/images/logo${useColorModeValue('', '-dark')}.svg`
+    const footPrintImg = `/images/logo_thick${useColorModeValue('', '-dark')}.svg`
 
     return (
         <Link href="/" scroll={false}>
@@ -30,7 +30,7 @@ const Logo = () => {
                 <LogoBox>
                     <Box mr={2}>
                         <Image style={{
-                        }} src={footPrintImg} width={20} height={20} alt="logo" />
+                        }} src={footPrintImg} width={32} height={32} alt="logo" />
                     </Box>
                     <Text
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
