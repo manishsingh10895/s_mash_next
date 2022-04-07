@@ -26,7 +26,7 @@ export default class Document extends NextDocument {
                     <link rel='apple-touch-icon' sizes='152x152' href='/icon-152x152.png' />
 
                     <link rel='manifest' href='/manifest.json' />
-                    <link rel='mask-icon' href='/icon-192x192.png' color='#5bbad5' />
+                    <link rel='mask-icon' href='/icon-192x192.png' color='#202023' />
                     <link rel='shortcut icon' href='/favicon.ico' />
 
                     <meta name='twitter:card' content='summary' />
