@@ -106,7 +106,7 @@ const Home: NextPage = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Art, Music, Cycling, Blender, and a bit Gaming 
+            Art, Music, Cycling, Blender, and a bit Gaming
           </Paragraph>
         </Section>
 
@@ -156,4 +156,7 @@ const Home: NextPage = () => {
   )
 }
 
+
 export default Home
+
+export { getServerSideProps } from '../components/chakra'; 

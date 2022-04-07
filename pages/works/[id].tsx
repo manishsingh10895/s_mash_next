@@ -18,3 +18,5 @@ export default function Work(props: Props) {
         </Layout>
     )
 }
+
+export { getServerSideProps } from '../../components/chakra';

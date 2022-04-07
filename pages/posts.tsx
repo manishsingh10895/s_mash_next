@@ -3,13 +3,15 @@ import React from 'react'
 import Layout from '../components/layouts/Article'
 
 export default function Posts() {
-  return (
-    <Layout>
-        <Container>
-            <Heading as="h3">
-                Posts
-            </Heading>
-        </Container>
-    </Layout>
-  )
+    return (
+        <Layout>
+            <Container>
+                <Heading as="h3">
+                    Posts
+                </Heading>
+            </Container>
+        </Layout>
+    )
 }
+
+export { getServerSideProps } from '../components/chakra';
