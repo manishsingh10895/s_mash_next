@@ -18,7 +18,7 @@ const ProfileImage = chakra(Image, {
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Container marginTop={10}>
+      <Box marginTop={10}>
         <Box
           borderRadius="lg"
           mb={6}
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             Work
           </Heading>
           <Paragraph>
-            Manish is currently working as a full-stack developer in <br /> <b>F&K Solutions</b>.
+            Manish is currently working as a full-stack developer at <b>F&K Solutions</b>.
           </Paragraph>
           <Box alignItems="center" my={4}>
             <NextLink href="/works" scroll={false}>
@@ -92,12 +92,20 @@ const Home: NextPage = () => {
             Completed the B.Tech in Computer Science from Delhi University.
           </BioSection>
           <BioSection>
-            <BioYear>2013</BioYear>
+            <BioYear>2016</BioYear>
             Interned at Zillion.io
           </BioSection>
           <BioSection>
-            <BioYear>2014 - 2016</BioYear>
+            <BioYear>2017 - 2018</BioYear>
             Worked at Trihund Solutions as a full-stack developer.
+          </BioSection>
+          <BioSection>
+            <BioYear>2018 - 2020</BioYear>
+            Worked at Almora.io as a full-stack developer.
+          </BioSection>
+          <BioSection>
+            <BioYear>2020 - Present</BioYear>
+            Working at F&K Solutions as a full-stack developer.
           </BioSection>
         </Section>
 
@@ -106,7 +114,7 @@ const Home: NextPage = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Art, Music, Cycling, Blender, and a bit Gaming
+            Art, Music, Cycling, Blender and a bit of Gaming
           </Paragraph>
         </Section>
 
@@ -151,7 +159,7 @@ const Home: NextPage = () => {
             </NextLink>
           </Box>
         </Section>
-      </Container>
+      </Box>
     </Layout>
   )
 }

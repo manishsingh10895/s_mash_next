@@ -5,6 +5,7 @@ import React from 'react';
 
 export default function ThemeToggleButton() {
     const { toggleColorMode } = useColorMode();
+
     const colorvalue = useColorModeValue('light', 'dark');
 
     return (
@@ -13,7 +14,7 @@ export default function ThemeToggleButton() {
                 style={{
                     display: 'inline-block'
                 }}
-                key={useColorModeValue('light', 'dark')}
+                key={colorvalue}
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
