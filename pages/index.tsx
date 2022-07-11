@@ -114,7 +114,7 @@ const Home: NextPage = () => {
             I ♥
           </Heading>
           <Paragraph>
-            Art, Music, Cycling, Blender and a bit of Gaming
+            Art, Cycling, Blender and a bit of Gaming
           </Paragraph>
         </Section>
 

@@ -18,13 +18,13 @@ export default function Works() {
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section delay={0}>
-                        <WorkGridItem id="Griffex" title='Griffex' thumbnail={thumbGriffex}>
+                        <WorkGridItem  title='Griffex' thumbnail={thumbGriffex}>
                             A platform focused on cryptocurrency exchange and trading.
                         </WorkGridItem>
                     </Section>
 
                     <Section delay={0.1}>
-                        <WorkGridItem id="Noften" title='Noften NFT Marketplace' thumbnail={thumbNoften}>
+                        <WorkGridItem  title='Noften NFT Marketplace' thumbnail={thumbNoften}>
                             A marketplace for NFTs for celebrities.
                         </WorkGridItem>
                     </Section>
