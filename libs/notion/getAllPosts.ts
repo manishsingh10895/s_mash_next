@@ -12,7 +12,7 @@ export async function getAllPosts({ includePages = false }) {
     try {
         let id = BLOG.notionPageId as string;
         const authToken = BLOG.notionAccessToken || undefined
-        console.log('[AUTH TOEN]', notionAccessToken);
+
         const api = new NotionAPI({ authToken })
         const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
 

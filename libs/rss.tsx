@@ -5,22 +5,22 @@ import { getPostBlocks } from '@/libs/notion'
 import { NotionRenderer } from 'react-notion-x';
 import { Code } from 'react-notion-x/build/third-party/code';
 import { Modal } from 'react-notion-x/build/third-party/modal';
+import { Collection } from 'react-notion-x/build/third-party/collection';
 
 const mapPageUrl = id => 'https://www.notion.so/' + id.replace(/-/g, '')
 
 const createFeedContent = async post => {
-    // @ts-ignore
+
     const content = ReactDOMServer.renderToString(<NotionRenderer
-    // @ts-ignore               
-        recordMap={ await getPostBlocks(post.id) }
-    // @ts-ignore
-        components = {{
-        code: Code
-    }}
-mapPageUrl = { mapPageUrl }
+        recordMap={await getPostBlocks(post.id)}
+        components={{
+            Code: Code,
+            Collection: Collection,
+        }}
+        mapPageUrl={mapPageUrl}
     />)
-const regexExp = /<div class="notion-collection-row"><div class="notion-collection-row-body"><div class="notion-collection-row-property"><div class="notion-collection-column-title"><svg.*?class="notion-collection-column-title-icon">.*?<\/svg><div class="notion-collection-column-title-body">.*?<\/div><\/div><div class="notion-collection-row-value">.*?<\/div><\/div><\/div><\/div>/g
-return content.replace(regexExp, '')
+    const regexExp = /<div class="notion-collection-row"><div class="notion-collection-row-body"><div class="notion-collection-row-property"><div class="notion-collection-column-title"><svg.*?class="notion-collection-column-title-icon">.*?<\/svg><div class="notion-collection-column-title-body">.*?<\/div><\/div><div class="notion-collection-row-value">.*?<\/div><\/div><\/div><\/div>/g
+    return content.replace(regexExp, '')
 }
 
 export async function generateRss(posts) {

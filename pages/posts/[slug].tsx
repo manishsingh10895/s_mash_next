@@ -45,7 +45,7 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
                 </Box>
 
                 <Flex ml={2}>
-                    {post.tags.map(tag => (
+                    {post?.tags?.map(tag => (
                         <Link key={tag} href={`/posts/tag/${tag}`}>
                             <Tag cursor={'pointer'} key={tag} mr={1} size={'sm'} variant="subtle">
                                 <a>{tag}</a>
