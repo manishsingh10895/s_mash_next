@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/layouts/Main';
@@ -7,6 +6,14 @@ import Fonts from '../components/Fonts';
 import Chakra from '../components/chakra';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
+
+// core styles shared by all of react-notion-x (required)
+import 'react-notion-x/src/styles.css'
+
+// used for code syntax highlighting (optional)
+import 'prismjs/themes/prism-tomorrow.css'
+
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return <>

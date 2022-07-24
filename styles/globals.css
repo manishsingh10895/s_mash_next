@@ -1,3 +1,9 @@
+:root .dark-mode,
+.chakra-ui-dark {
+  --fg-color: rgb(255, 255, 255) !important;
+  --fg-color-1: rgb(251 211 141) !important;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +19,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Notion Overrides */
+body .notion-text {
+  font-size: 18px;
+}
+
+body .notion .notion-code {
+  font-size: 100%;
+}
+
+.notion-code, .notion-text, .notion-bookmark {
+  margin: 0.5rem 0;
 }
