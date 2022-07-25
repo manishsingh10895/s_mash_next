@@ -30,6 +30,13 @@ body .notion .notion-code {
   font-size: 100%;
 }
 
-.notion-code, .notion-text, .notion-bookmark {
+.notion-code,
+.notion-text,
+.notion-bookmark {
   margin: 0.5rem 0;
+}
+
+body .notion-page {
+  padding-left: 0;
+  padding-right: 0;
 }

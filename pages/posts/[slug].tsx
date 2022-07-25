@@ -44,10 +44,10 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
                     {formatDate(post?.date?.start_date || post.createdTime, BLOG.lang)}
                 </Box>
 
-                <Flex ml={2}>
+                <Flex wrap={'wrap'} ml={2}>
                     {post?.tags?.map(tag => (
                         <Link key={tag} href={`/posts/tag/${tag}`}>
-                            <Tag cursor={'pointer'} key={tag} mr={1} size={'sm'} variant="subtle">
+                            <Tag m={1} cursor={'pointer'} key={tag} mr={1} size={'sm'} variant="subtle">
                                 <a>{tag}</a>
                             </Tag>
                         </Link>

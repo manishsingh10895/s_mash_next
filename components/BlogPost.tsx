@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import formatDate from '@/libs/formatDate'
-import { Box, Text, Link as CLink, Heading } from '@chakra-ui/react'
+import { Box, Text, Link as CLink, Heading, Flex, Tag } from '@chakra-ui/react'
+import Tags from './Tags'
 
 const BlogPost = ({ post }) => {
     console.log('[POST]');
@@ -19,6 +20,16 @@ const BlogPost = ({ post }) => {
                             {formatDate(post?.date?.start_date || post.createdTime, BLOG.lang)}
                         </Box>
                     </Box>
+
+                    <Flex wrap={'wrap'} mt={2} mb={2}>
+                        {post?.tags?.map(tag => (
+                            <Link key={tag} href={`/posts/tag/${tag}`}>
+                                <Tag m={1} cursor={'pointer'} key={tag} mr={1} size={'sm'} variant="subtle">
+                                    <a>{tag}</a>
+                                </Tag>
+                            </Link>
+                        ))}
+                    </Flex>
 
                     <Box>
                         <Text>

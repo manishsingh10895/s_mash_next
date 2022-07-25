@@ -35,7 +35,7 @@ const LinkItem = (props: LinkItemProps) => {
     return (
         <NextLink href={href} passHref scroll={false}>
             <Link
-                p={2}
+                p={'0.2rem 1rem'}
                 borderRadius={16}
                 bg={active ? 'glassTeal' : undefined}
                 color={active ? '#202023' : inactiveColor}

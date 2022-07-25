@@ -6,7 +6,7 @@ export default function Tags({ tags, currentTag }) {
     if (!tags) return null;
     return (
         <Box>
-            <Flex>
+            <Flex wrap={'wrap'}>
                 {
                     Object.keys(tags).map(key => {
                         const activeTag = currentTag === key;

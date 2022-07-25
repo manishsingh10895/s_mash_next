@@ -15,7 +15,7 @@ const createFeedContent = async post => {
         recordMap={await getPostBlocks(post.id)}
         components={{
             Code: Code,
-            Collection: Collection,
+            // Collection: Collection,
         }}
         mapPageUrl={mapPageUrl}
     />)
