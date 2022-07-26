@@ -12,10 +12,12 @@ export default function Footer() {
                 borderRadius={'16px'}
                 textAlign='center' margin={'auto'}>
             </Box>
-            <Flex justifyContent={'space-between'}
+            <Flex justifyContent={'center'}
                 pt={4}
+                alignItems='center'
+                wrap={'wrap'}
             >
-                <Text>
+                <Text textAlign={'center'} minW={'250px'} mr={{ base: 0, md: 10, lg: 10, xl: 10 }}>
                     Copyright 2022 Manish Singh
                 </Text>
 
