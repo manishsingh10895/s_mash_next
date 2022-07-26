@@ -64,7 +64,7 @@ export async function getAllPosts({ includePages = false }) {
                 // Add fullwidth, createdtime to properties
                 properties.createdTime = new Date(
                     block[id].value?.created_time
-                ).toString()
+                ).toString();
                 properties.fullWidth = block[id].value?.format?.page_full_width ?? false
 
                 data.push(properties)
