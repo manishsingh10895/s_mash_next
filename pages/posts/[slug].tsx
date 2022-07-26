@@ -9,6 +9,7 @@ import { Collection } from 'react-notion-x/build/third-party/collection';
 import Image from 'next/image'
 import Link from 'next/link'
 import formatDate from '../../libs/formatDate'
+import CoverImage from '../../components/CoverImage'
 
 const mapPageUrl = id => {
     return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -24,15 +25,9 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
             description={post.summary}
         >
             {
-                post.cover && post.cover.file && (
-                    <Box h={300}
-                        overflow={'hidden'}
-                        marginLeft={`calc((100% - 100vw) / 2)`}
-                        w={'100vw'}
-                        maxW={'100vw'} position="relative">
-                        <Image objectFit='cover' style={{ overflowX: 'hidden' }} layout='fill' alt={post.title} src={post.cover.file.url}>
-                        </Image>
-                    </Box>)
+                <CoverImage alt={post.title} source={post.cover}
+                    key={post.cover}
+                />
             }
 
             <Heading fontWeight={'normal'} pt={7} pb={2} as="h2">
@@ -57,8 +52,9 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
 
             {
                 blockMap && (
-                    <Box mt={3}>
+                    <Box mt={3} overflowX={'hidden'} minHeight={'100vh'}>
                         <NotionRenderer
+                            previewImages={!!blockMap.preview_images}
                             recordMap={blockMap}
                             components={{
                                 Code: (Code as any),
@@ -70,7 +66,7 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
                     </Box>
                 )
             }
-        </Layout>
+        </Layout >
     )
 }
 

@@ -51,8 +51,14 @@ export async function getAllPosts({ includePages = false }) {
                 const properties = (await getPageProperties(id, block, schema, authToken)) || null
                 const notionHqPage = notionHqResults.find(p => p.id == id);
 
-                if (notionHqPage) {
-                    properties.cover = notionHqPage['cover'];
+                if (notionHqPage && notionHqPage['cover']) {
+                    let url;
+                    if (notionHqPage['cover'].type == 'external') {
+                        url = notionHqPage['cover'].external.url;
+                    } else if (notionHqPage['cover'].type == 'file') {
+                        url = notionHqPage['cover'].file.url;
+                    }
+                    properties.cover = url;
                 }
 
                 // Add fullwidth, createdtime to properties

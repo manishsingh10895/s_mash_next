@@ -4,7 +4,6 @@ import { WorkGridItem } from '../components/GridItem'
 import Layout from '../components/layouts/Article'
 import Section from '../components/Section'
 
-
 import thumbGriffex from '../public/images/griffex.png';
 import thumbNoften from '../public/images/noften.png';
 
@@ -18,7 +17,7 @@ export default function Works() {
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section delay={0}>
-                        <WorkGridItem  title='Griffex' thumbnail={thumbGriffex}>
+                        <WorkGridItem title='Griffex' thumbnail={thumbGriffex}>
                             A platform focused on cryptocurrency exchange and trading.
                         </WorkGridItem>
                     </Section>

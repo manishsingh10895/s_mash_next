@@ -7,7 +7,6 @@ type Props = {
 
 }
 
-
 export default function Work(props: Props) {
     const router = useRouter();
     const { id } = router.query;

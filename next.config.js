@@ -8,7 +8,7 @@ const nextConfig = withPWA({
     disable: process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined,
   },
   images: {
-    domains: ['s3-us-west-2.amazonaws.com', 's3.us-west-2.amazonaws.com'],
+    domains: ['s3-us-west-2.amazonaws.com', 's3.us-west-2.amazonaws.com', 'images.unsplash.com'],
   }
 });
 

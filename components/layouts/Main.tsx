@@ -2,6 +2,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 // const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 //     ssr: false,
@@ -22,7 +23,10 @@ const Main = ({ children, router }) => {
 
                 {children}
 
-                {/* <Footer /> */}
+            </Container>
+
+            <Container maxW="container.lg">
+                <Footer />
             </Container>
         </Box>
     )
