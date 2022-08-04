@@ -44,5 +44,3 @@ export async function getStaticProps() {
         revalidate: 1
     }
 }
-
-// export { getServerSideProps } from '../../components/chakra';
