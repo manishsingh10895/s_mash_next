@@ -74,7 +74,7 @@ export default function CoverImage(props: Props) {
     }, [isFetched, data, isError, remove]);
 
     return (
-        <Box h={300}
+        <Box h={`46vw`}
             overflowX={'hidden'}
             marginLeft={`calc((100% - 100vw) / 2)`}
             w={'calc(100vw - 0.1rem)'}
