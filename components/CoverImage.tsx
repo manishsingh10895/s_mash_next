@@ -81,7 +81,8 @@ export default function CoverImage(props: Props) {
             maxW={'100vw'} position="relative">
             {
                 src && <Image
-                    loading='lazy'
+                    priority={true}
+                    loading='eager'
                     blurDataURL={coverBlurDataUrl}
                     placeholder='blur' objectFit='cover'
                     style={{ overflowX: 'hidden' }} layout='fill' alt={alt} src={src}
