@@ -11,6 +11,12 @@ import Link from 'next/link'
 import formatDate from '../../libs/formatDate'
 import CoverImage from '../../components/CoverImage'
 
+// core styles shared by all of react-notion-x (required)
+import 'react-notion-x/src/styles.css'
+
+// used for code syntax highlighting (optional)
+import 'prismjs/themes/prism-tomorrow.css'
+
 const mapPageUrl = id => {
     return 'https://www.notion.so/' + id.replace(/-/g, '')
 }

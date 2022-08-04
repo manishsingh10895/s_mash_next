@@ -8,18 +8,12 @@ import Chakra from '../components/chakra';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 
-// core styles shared by all of react-notion-x (required)
-import 'react-notion-x/src/styles.css'
-
-// used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-tomorrow.css'
-
 import '../styles/globals.css'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const queryClient = React.useRef(new QueryClient());
-  
+
   return <>
     <QueryClientProvider client={queryClient.current}>
       <Hydrate state={pageProps.dehydratedState}>
@@ -30,8 +24,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           <Fonts />
           <Layout router={router}>
             <AnimatePresence
+              presenceAffectsLayout={false}
               exitBeforeEnter
-              initial={true}
+              initial={false}
               onExitComplete={() => {
                 if (typeof window !== 'undefined') {
                   window.scrollTo({ top: 0 });
