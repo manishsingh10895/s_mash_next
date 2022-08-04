@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import dynamic from 'next/dynamic'
 import { Box, Container } from '@chakra-ui/react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'

@@ -6,10 +6,14 @@ import {
 import theme from '../libs/theme'
 
 export default function Chakra({ cookies, children }) {
-    const colorModeManager =
-        typeof cookies === 'string'
-            ? cookieStorageManager(cookies)
-            : localStorageManager
+    // const colorModeManager =
+    //     typeof cookies === 'string'
+    //         ? cookieStorageManager(cookies)
+    //         : localStorageManager
+
+    const colorModeManager = localStorageManager;
+
+    console.log(cookies);
 
     return (
         <ChakraProvider theme={theme} colorModeManager={colorModeManager}>
