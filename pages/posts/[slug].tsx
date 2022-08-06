@@ -16,6 +16,8 @@ import 'react-notion-x/src/styles.css'
 
 // used for code syntax highlighting (optional)
 import 'prismjs/themes/prism-tomorrow.css'
+import Giscus from '@giscus/react'
+import Comments from '../../components/Comments'
 
 const mapPageUrl = id => {
     return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -72,6 +74,10 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
                     </Box>
                 )
             }
+
+            <Box padding={'10px 0'}>
+                <Comments />
+            </Box>
         </Layout >
     )
 }

@@ -7,6 +7,7 @@ import Layout from '../../components/layouts/Article'
 import Pagination from '../../components/Pagination'
 import { getAllPosts } from '../../libs/notion/getAllPosts'
 
+
 export default function Posts({ posts, page, showNext }) {
     return (
         <Layout>
