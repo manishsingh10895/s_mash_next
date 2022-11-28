@@ -4,7 +4,6 @@ import { createHash } from 'crypto'
 import Layout from '../../components/layouts/Article'
 import { Box, Flex, Heading, Tag } from '@chakra-ui/react'
 import { NotionRenderer } from 'react-notion-x'
-import { Code } from 'react-notion-x/build/third-party/code'
 import { Collection } from 'react-notion-x/build/third-party/collection';
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,10 +17,26 @@ import 'react-notion-x/src/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
 import Giscus from '@giscus/react'
 import Comments from '../../components/Comments'
+import dynamic from 'next/dynamic'
 
 const mapPageUrl = id => {
     return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
+
+const Code = dynamic(() => {
+    return import('react-notion-x/build/third-party/code')
+        .then(async (m) => {
+            await Promise.all([
+                import('prismjs/components/prism-rust.js'),
+                import('prismjs/components/prism-typescript.js'),
+                import('prismjs/components/prism-javascript.js'),
+                import('prismjs/components/prism-scss.js'),
+                import('prismjs/components/prism-cshtml.js'),
+            ])
+
+            return m.Code
+        })
+})
 
 
 const BlogPost = ({ post, blockMap, emailHash }) => {
