@@ -9,6 +9,9 @@ const nextConfig = withPWA({
   },
   images: {
     domains: ['s3-us-west-2.amazonaws.com', 's3.us-west-2.amazonaws.com', 'images.unsplash.com'],
+  },
+  experimental: {
+    outputStandalone: true
   }
 });
 

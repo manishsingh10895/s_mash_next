@@ -36,15 +36,15 @@ export function WorkGridItem(props: GridItemProps) {
     return (
         <Box w="100%" textAlign={'center'}>
             {/* <NextLink href={`works/${id}`} scroll={false}> */}
-                {/* <LinkBox cursor={'pointer'}> */}
-                    <Image src={props.thumbnail} alt={props.title} className={`grid-item-thumbnail`} placeholder='blur' />
-                    {/* <LinkOverlay href={`works/${id}`}> */}
-                        <Text mt={2} fontSize={20}>
-                            {props.title}
-                        </Text>
-                    {/* </LinkOverlay> */}
-                    <Text fontSize={14}>{props.children}</Text>
-                {/* </LinkBox> */}
+            {/* <LinkBox cursor={'pointer'}> */}
+            <Image src={props.thumbnail} alt={props.title} className={`grid-item-thumbnail`} placeholder='blur' />
+            {/* <LinkOverlay href={`works/${id}`}> */}
+            <Text mt={2} fontSize={20}>
+                {props.title}
+            </Text>
+            {/* </LinkOverlay> */}
+            <Text fontSize={14}>{props.children}</Text>
+            {/* </LinkBox> */}
             {/* </NextLink> */}
         </Box>
     )

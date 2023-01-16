@@ -18,7 +18,7 @@ export default function Footer() {
                 wrap={'wrap'}
             >
                 <Text textAlign={'center'} minW={'250px'} mr={{ base: 0, md: 10, lg: 10, xl: 10 }}>
-                    Copyright 2022 Manish Singh
+                    Copyright 2023 Manish Singh
                 </Text>
 
                 <Flex>
