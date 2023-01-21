@@ -12,7 +12,7 @@ import NextLink from "next/link";
 import React from "react";
 import Image from "next/image";
 
-export default function () {
+export default function Supercounter() {
   return (
     <Layout>
       <Container height={"calc(100vh - 250px)"}>
